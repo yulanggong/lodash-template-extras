@@ -35,27 +35,30 @@
 			return '';
 		});
 
+		//parse block
 		markedText = markedText.replace(/<block\s+name=['"]?([^'">\s]+)['"]?\s*\/>/g, function(all, name){
 			return '<block '+ name +'>';
 		});
 
-
+		//parse block
 		markedText = markedText.replace(/<block\s+name=['"]?([^'">\s]+)['"]?\s*>([\s\S]*?)<\/block>/g, function(all, name, block){
 			blocks[name] = block;
 			return '<block '+ name +'>';
 		});
 
-		//解析 override
+		//parse override
 		markedText = markedText.replace(/<override\s+name=['"]?([^'">\s]+)['"]?\s*>([\s\S]*?)<\/override>/g, function(all, name, override){
 			overrides[name] = override;
 			return '';
 		});
 
+		//parse prepend
 		markedText = markedText.replace(/<prepend\s+name=['"]?([^'">\s]+)['"]?\s*>([\s\S]*?)<\/prepend>/g, function(all, name, prepend){
 			prepends[name] = prepend;
 			return '';
 		});
 
+		//parse prepend
 		markedText = markedText.replace(/<append\s+name=['"]?([^'">\s]+)['"]?\s*>([\s\S]*?)<\/append>/g, function(all, name, append){
 			appends[name] = append;
 			return '';
