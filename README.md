@@ -68,7 +68,9 @@ _.templateEx('hello',{
 <div id="main">
     <block name="main"/>
 </div>
+```
 
+```html
 <!-- page -->
 <% @extends("layout")%>
 <prepend name="header">
@@ -102,7 +104,8 @@ _.templateEx('hello',{
 <div id="header"></div>
 <div id="main"></div>
 <% @include("footer")%>
-
+```
+```html
 <!-- footer -->
 <div id="footer"></div>
 ```
