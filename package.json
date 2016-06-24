@@ -1,0 +1,32 @@
+{
+  "name": "underscore-template-extras",
+  "version": "1.0.0",
+  "description": "Add inheritance to underscore/lodash template engine",
+  "main": "underscore-template-extras.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yulanggong/underscore-template-extras.git"
+  },
+  "keywords": [
+    "underscore",
+    "template",
+    "inheritance"
+  ],
+  "author": "yulanggong",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yulanggong/underscore-template-extras/issues"
+  },
+  "homepage": "https://github.com/yulanggong/underscore-template-extras#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "lodash": "^4.13.1",
+    "mocha": "^2.5.3"
+  }
+}

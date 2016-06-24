@@ -2,11 +2,11 @@
 	var templates = {};
 	var templateHelpers = {};
 
-
 	_.templateEx = function(tplName, data){
 		return templates[tplName].compile(data);
 	};
 
+	_.templateEx.templates = templates;
 
 	var addTemplate = function(name, text, _templates){
 		var compile;
@@ -28,7 +28,7 @@
 			parent = templates[name];
 
 			if(!parent){
-				addTemplate(name, _templates[name]);
+				addTemplate(name, _templates[name], _templates);
 				parent = templates[name];
 			}
 
@@ -38,6 +38,7 @@
 		markedText = markedText.replace(/<block\s+name=['"]?([^'">\s]+)['"]?\s*\/>/g, function(all, name){
 			return '<block '+ name +'>';
 		});
+
 
 		markedText = markedText.replace(/<block\s+name=['"]?([^'">\s]+)['"]?\s*>([\s\S]*?)<\/block>/g, function(all, name, block){
 			blocks[name] = block;
@@ -64,7 +65,7 @@
 			markedText = parent.markedText.replace(/<block\s([^>]+)>/g, function(all, name){
 				return (prepends[name]||'')
 					+ (overrides[name] != null ? overrides[name] :
-						parent&&parent.blocks[name] != null ? parent.blocks[name] : '')
+						parent&&parent.blocks[name] != null ? parent.blocks[name] : all)
 					+ (appends[name]||'');
 			});
 		}
@@ -92,6 +93,8 @@
 			templates[name].alias = alias;
 			templates[alias] = templates[name];
 		}
+
+		return templates[name];
 	};
 
 	_.templateEx.add = function(name, text){
