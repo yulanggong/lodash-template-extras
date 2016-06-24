@@ -25,11 +25,11 @@ _.templateEx.add('layout', ''
 
 //add some templates
 _.templateEx.add({
-    'layout': '<block name="head">'
+    layout: '<block name="head">'
                  + '<h1>Foo</h1>'
              + '</block>'
              + '<block name="body"/>',
-     'page': '<% @extends("layout")%>'
+     page: '<% @extends("layout")%>'
             + '<append name="head">'
                 + '<p>Hello world!</p>'
             + '</append>'
@@ -46,7 +46,7 @@ _.templateEx.add({
 
 ```js
 _.templateEx.add({
-    'hello': '<h1>Hello <%=name%>!</h1>'
+    hello: '<h1>Hello <%=name%>!</h1>'
 });
 
 _.templateEx('hello',{
