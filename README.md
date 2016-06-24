@@ -52,7 +52,7 @@ _.templateEx.add({
 _.templateEx('hello',{
     name: 'world'
 });
-//<h1>Hello world!</h1>
+// ➜ <h1>Hello world!</h1>
 ````
 
 ## Inheritance
