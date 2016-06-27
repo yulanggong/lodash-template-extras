@@ -1,4 +1,14 @@
-;(function () {
+;(function(init, global){
+	global._ ? init(global._) :
+	global.lodash ? init(global.lodash) :
+	global.underscore ? init(global.underscore) : (function(){
+		if(typeof module !== 'undefined'&& typeof exports === 'object') {
+			module.exports = init;
+		} else if(typeof define === 'function' && define.amd) {
+			define(function(){return init});
+		}
+	}());
+})(function(_){
 	var templates = {};
 	var templateHelpers = {};
 
@@ -126,4 +136,4 @@
 	};
 
 	_.templateEx.addHelper('include', _.templateEx);
-})();
+}, this);

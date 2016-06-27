@@ -6,10 +6,17 @@ Add inheritance to underscore/lodash template engine.
 
 # Installation
 
+In browser:
 ```html
 <script src="lodash.js"></script>
 <script src="underscore-template-extras.js"></script>
 ```
+
+In Node.js:
+```js
+var _ = require('lodash');
+require('underscore-remplate-extras')(_);
+````
 
 # Usage
 

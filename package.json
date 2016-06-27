@@ -27,6 +27,7 @@
   "devDependencies": {
     "chai": "^3.5.0",
     "lodash": "^4.13.1",
-    "mocha": "^2.5.3"
+    "mocha": "^2.5.3",
+    "underscore": "^1.8.3"
   }
 }
