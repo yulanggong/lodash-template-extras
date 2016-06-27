@@ -1,7 +1,7 @@
 require('mocha');
 var expect = require('chai').expect;
 
-var initTemplateEx = require('../underscore-template-extras');
+var initTemplateEx = require('..//lodash-template-extras');
 
 test('underscore');
 test('lodash');

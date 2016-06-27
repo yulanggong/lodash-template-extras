@@ -1,21 +1,21 @@
-# Underscore Template Extras
-Add inheritance to underscore/lodash template engine.
+# Lodash Template Extras
+Add inheritance to lodash/underscore template engine.
 
 # Download
-[Last verison](https://raw.githubusercontent.com/yulanggong/underscore-template-extras/master/underscore-template-extras.js)
+[Last verison](https://raw.githubusercontent.com/yulanggong/lodash-template-extras/master/lodash-template-extras.js)
 
 # Installation
 
 In browser:
 ```html
 <script src="lodash.js"></script>
-<script src="underscore-template-extras.js"></script>
+<script src="lodash-template-extras.js"></script>
 ```
 
 In Node.js:
 ```js
 var _ = require('lodash');
-require('underscore-remplate-extras')(_);
+require('lodash-remplate-extras')(_);
 ````
 
 # Usage
