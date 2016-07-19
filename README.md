@@ -71,7 +71,6 @@ _.templateEx('hello',{
 
 ```html
 <!-- layout -->
-
 <div id="header">
     <block name="header">
         <h1>Foo</h1>
