@@ -12,6 +12,11 @@ In browser:
 <script src="lodash-template-extras.js"></script>
 ```
 
+Using npm:
+```sh
+$ npm i lodash-template-extras
+```
+
 In Node.js:
 ```js
 var _ = require('lodash');
