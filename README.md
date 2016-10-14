@@ -20,7 +20,7 @@ $ npm i lodash-template-extras
 In Node.js:
 ```js
 var _ = require('lodash');
-require('lodash-remplate-extras')(_);
+require('lodash-template-extras')(_);
 ````
 
 # Usage
