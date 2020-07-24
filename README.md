@@ -132,7 +132,7 @@ _.templateEx('hello',{
 ## Helper
 ```js
 _.templateEx.addHelper('upper', function(str){
-    str.toUpperCase();
+    return str.toUpperCase();
 })
 ````
 ```html
